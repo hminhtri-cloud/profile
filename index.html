@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cybersecurity Portfolio - Blue Team, SOC Analyst & DFIR Specialist Profile">
+  <title>Cybersecurity Portfolio | SOC Analyst & DFIR Specialist</title>
+
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-badge"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="logo-text">SEC<span class="highlight">PROFILE</span></span>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Trang chủ</a>
+        <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="#skills" class="nav-link">Kỹ năng</a>
+        <a href="#projects" class="nav-link">Dự án</a>
+        <a href="#experience" class="nav-link">Kinh nghiệm</a>
+        <a href="#certifications" class="nav-link">Chứng chỉ</a>
+        <a href="#contact" class="nav-link">Liên hệ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-pill">
+          <span>Get In Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <!-- Scrolling Metub-Style Ticker Banner -->
+    <div class="marquee-ticker">
+      <div class="ticker-track">
+        <div class="ticker-item"><span><i class="fa-solid fa-shield-cat"></i> SOC ANALYST</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-microscope"></i> DFIR INVESTIGATION</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-bolt"></i> SIEM AUTOMATION</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-radar"></i> THREAT HUNTING</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-network-wired"></i> NETWORK FORENSICS</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-lock"></i> INCIDENT RESPONSE</span></div>
+        <!-- Duplicated for seamless loop -->
+        <div class="ticker-item"><span><i class="fa-solid fa-shield-cat"></i> SOC ANALYST</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-microscope"></i> DFIR INVESTIGATION</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-bolt"></i> SIEM AUTOMATION</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-radar"></i> THREAT HUNTING</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-network-wired"></i> NETWORK FORENSICS</span></div>
+        <div class="ticker-item"><span><i class="fa-solid fa-lock"></i> INCIDENT RESPONSE</span></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          <span>CYBERSECURITY & DEFENSIVE SECURITY SPECIALIST</span>
+        </div>
+
+        <h1 class="hero-title">
+          BẢO VỆ HỆ THỐNG &amp;<br>
+          <span class="highlight-text">ỨNG PHÓ SỰ CỐ BẢO MẬT</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Chào bạn, tôi là một chuyên viên An ninh mạng tập trung vào mảng <strong>Blue Team (SOC Analyst &amp; DFIR)</strong>. 
+          Đam mê phân tích nhật ký (Logs), giám sát SIEM, điều tra vết vết mã độc và xây dựng quy trình tự động hóa cảnh báo bảo mật.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary btn-lg btn-pill">
+            <i class="fa-solid fa-folder-open"></i> Xem Dự Án
+          </a>
+          <a href="assets/CV_Cybersecurity.pdf" download class="btn btn-outline btn-lg btn-pill">
+            <i class="fa-solid fa-download"></i> Tải CV PDF
+          </a>
+        </div>
+
+        <!-- Metrics / Highlights Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-count="150">0</div>
+            <div class="stat-label">Security Incidents Triaged</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="99">0</div>
+            <div class="stat-label">% Uptime & Alert SLA</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="30">0</div>
+            <div class="stat-label">DFIR / CTF Labs Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="5">0</div>
+            <div class="stat-label">Security Certifications</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">VỀ TÔI</span>
+        <h2 class="section-title">Đam mê giám sát &amp; Phòng thủ Không gian mạng</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="profile-card">
+            <div class="profile-avatar">
+              <i class="fa-solid fa-user-shield avatar-icon"></i>
+            </div>
+            <div class="profile-badge">
+              <i class="fa-solid fa-circle-check"></i> Ready for SOC Role
+            </div>
+            <div class="profile-info text-center">
+              <h3>Nguyễn Văn A</h3>
+              <p class="profile-role">Blue Team &amp; SOC Analyst</p>
+              <div class="social-links">
+                <a href="https://github.com" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://tryhackme.com" target="_blank" title="TryHackMe"><i class="fa-solid fa-flag"></i></a>
+                <a href="mailto:contact@domain.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-content">
+          <h3 class="about-heading">Định hướng sự nghiệp &amp; Mục tiêu công việc</h3>
+          <p>
+            Là sinh viên ngành <strong>An toàn Thông tin / Khoa học Máy tính</strong>, tôi định hướng trở thành một 
+            <strong>Tier 1/Tier 2 SOC Analyst &amp; DFIR Specialist</strong> chuyên nghiệp. Tôi có kiến thức vững chắc về kiến trúc mạng, 
+            hệ điều hành (Linux/Windows Internals), quy trình xử lý sự cố bảo mật (Incident Response Lifecycle) và viết các luật nhận diện tấn công.
+          </p>
+          <p>
+            Tôi chủ động rèn luyện kỹ năng thực chiến qua các nền tảng Cyber Range hàng đầu như <em>TryHackMe, HackTheBox, Blue Team Labs Online (BTLO)</em> 
+            và xây dựng các phòng thí nghiệm (Homelab) giám sát SIEM thực tế với Splunk, ELK Stack và Wazuh.
+          </p>
+
+          <div class="key-highlights-grid">
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-eye"></i></div>
+              <div>
+                <h4>SIEM &amp; Log Analysis</h4>
+                <p>Thành thạo phân tích Sysmon, Event Log, Firewall &amp; PCAP logs</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div>
+                <h4>Digital Forensics</h4>
+                <p>Điều tra bộ nhớ RAM (Volatility), đĩa cứng (Autopsy) &amp; YARA Rules</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-gears"></i></div>
+              <div>
+                <h4>SOC Automation</h4>
+                <p>Tự động hóa cảnh báo bằng Python scripting &amp; SOAR workflows</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <div>
+                <h4>MITRE ATT&amp;CK</h4>
+                <p>Ánh xạ kỹ thuật tấn công của Hacker để tối ưu hóa quy trình phòng thủ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">KỸ NĂNG CHUYÊN MÔN</span>
+        <h2 class="section-title">Công cụ &amp; Công nghệ Phòng thủ</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="skills-categories">
+        <!-- Category 1: SIEM & Monitoring -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>SIEM &amp; Monitoring</h3>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-info"><span>Splunk Enterprise &amp; Enterprise Security</span><span class="skill-percent">90%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>Elastic Stack (ELK / Winlogbeat / Sysmon)</span><span class="skill-percent">85%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>Wazuh EDR &amp; Open Source SIEM</span><span class="skill-percent">80%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Forensics & Incident Response -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-microscope"></i></div>
+            <h3>DFIR &amp; Investigation</h3>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-info"><span>Wireshark &amp; Network Traffic Analysis</span><span class="skill-percent">92%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>Volatility (Memory Forensics)</span><span class="skill-percent">82%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 82%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>Autopsy / FTK Imager (Disk Forensics)</span><span class="skill-percent">85%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Automation & Detection Engineering -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Scripting &amp; Detection</h3>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-info"><span>Python (Automation &amp; Log Parsers)</span><span class="skill-percent">88%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>Bash Scripting &amp; PowerShell</span><span class="skill-percent">85%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>YARA Rules &amp; SIGMA Detection Rules</span><span class="skill-percent">80%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 4: OS & Network Security -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>OS &amp; Network Security</h3>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-info"><span>Linux Admin (Ubuntu, Kali, REMnux)</span><span class="skill-percent">90%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>Active Directory &amp; Windows Event Auditing</span><span class="skill-percent">84%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 84%;"></div></div>
+            </li>
+            <li>
+              <div class="skill-info"><span>Snort / Suricata IDS/IPS Rules</span><span class="skill-percent">80%</span></div>
+              <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">DỰ ÁN TIÊU BIỂU</span>
+        <h2 class="section-title">Hệ thống Giám sát &amp; Lab Thực chiến</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Tất cả</button>
+        <button class="filter-btn" data-filter="siem">SOC &amp; SIEM</button>
+        <button class="filter-btn" data-filter="dfir">DFIR &amp; Điều tra</button>
+        <button class="filter-btn" data-filter="automation">Tự động hóa</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="siem">
+          <div class="project-badge">SOC &amp; SIEM</div>
+          <div class="project-content">
+            <h3 class="project-title">Enterprise SIEM Homelab with Elastic Stack &amp; Sysmon</h3>
+            <p class="project-desc">
+              Xây dựng Homelab giám sát toàn bộ hoạt động của hệ thống Windows Enterprise. Tích hợp Sysmon để phân tích tiến trình độc hại, ánh xạ cảnh báo lên khung MITRE ATT&amp;CK.
+            </p>
+            <div class="project-tech">
+              <span>ELK Stack</span>
+              <span>Sysmon</span>
+              <span>Winlogbeat</span>
+              <span>MITRE ATT&CK</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-lines"></i> Report Writeup</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="automation">
+          <div class="project-badge">Tự động hóa</div>
+          <div class="project-content">
+            <h3 class="project-title">Automated IP &amp; Hash Triage SOAR Pipeline</h3>
+            <p class="project-desc">
+              Phát triển công cụ bằng Python tự động truy vấn VirusTotal, AbuseIPDB và AlienVault OTX ngay khi SIEM phát hiện cảnh báo nguy cơ cao, gửi cảnh báo chi tiết qua Telegram / Discord Webhook.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>VirusTotal API</span>
+              <span>REST API</span>
+              <span>Telegram Bot</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="dfir">
+          <div class="project-badge">DFIR &amp; Điều tra</div>
+          <div class="project-content">
+            <h3 class="project-title">Ransomware Memory &amp; Disk Artifact Forensics</h3>
+            <p class="project-desc">
+              Điều tra mẫu ảnh bộ nhớ (RAM dump) bị lây nhiễm Ransomware bằng Volatility 3. Khôi phục tiến trình injection, giải mã payload và viết tập luật YARA để phát hiện biến thể tương tự.
+            </p>
+            <div class="project-tech">
+              <span>Volatility 3</span>
+              <span>Autopsy</span>
+              <span>YARA</span>
+              <span>REMnux</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-pdf"></i> DFIR Report</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="siem">
+          <div class="project-badge">SOC &amp; SIEM</div>
+          <div class="project-content">
+            <h3 class="project-title">Wireshark Network Traffic Analysis &amp; C2 Detection</h3>
+            <p class="project-desc">
+              Phân tích tệp PCAP lưu lượng mạng chứa dấu hiệu kết nối Command &amp; Control (C2) qua DNS Tunneling và Cobalt Strike Beacon. Tạo luật Snort để ngăn chặn lưu lượng bất thường.
+            </p>
+            <div class="project-tech">
+              <span>Wireshark</span>
+              <span>Snort IDS</span>
+              <span>Network Forensics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-file-lines"></i> Writeup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section -->
+  <section class="section timeline-section" id="experience">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">LỘ TRÌNH PHÁT TRIỂN</span>
+        <h2 class="section-title">Kinh nghiệm &amp; Học vấn</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fa-solid fa-shield-virus"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-date">06/2025 - Hiện tại</span>
+            <h3 class="timeline-title">SOC Analyst Intern</h3>
+            <h4 class="timeline-company">Công ty Cổ phần An ninh mạng ABC</h4>
+            <ul>
+              <li>Giám sát 24/7 và xử lý bước đầu (Tier 1 triage) các cảnh báo từ hệ thống Splunk SIEM.</li>
+              <li>Tối ưu hóa và loại bỏ hơn 30% cảnh báo báo động giả (False Positives) bằng cách tinh chỉnh luật SIGMA.</li>
+              <li>Tham gia trực tiếp điều tra và viết báo cáo sơ bộ cho 5+ sự cố mã độc trong môi trường khách hàng.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fa-solid fa-trophy"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 - 2025</span>
+            <h3 class="timeline-title">Cybersecurity CTF &amp; Blue Team Specialist</h3>
+            <h4 class="timeline-company">Blue Team Labs &amp; TryHackMe</h4>
+            <ul>
+              <li>Hoàn thành hơn 100+ phòng lab thực hành Blue Team, đạt xếp hạng Top 1% trên TryHackMe.</li>
+              <li>Đạt chứng nhận Blue Team Level 1 (BTL1) với điểm số xuất sắc về xử lý sự cố thực chiến.</li>
+              <li>Tham gia các giải đấu CTF sinh viên chuyên đề Defensive Forensics và Log Analysis.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022 - 2026</span>
+            <h3 class="timeline-title">Cử nhân An toàn Thông tin / Công nghệ Thông tin</h3>
+            <h4 class="timeline-company">Trường Đại học Công nghệ Thông tin</h4>
+            <ul>
+              <li>Chuyên ngành: An toàn Thông tin (Information Security). Điểm trung bình GPA: 3.5 / 4.0.</li>
+              <li>Đồ án tốt nghiệp: "Xây dựng hệ thống phát hiện và phản ứng sự cố tự động (SOAR) ứng dụng AI/ML".</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section cert-section" id="certifications">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">CHỨNG CHỈ &amp; GIẢI THƯỞNG</span>
+        <h2 class="section-title">Chứng chỉ Quốc tế &amp; Thành tích</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="cert-details">
+            <h3>CompTIA Security+ (SY0-701)</h3>
+            <p class="cert-issuer">Issued by CompTIA</p>
+            <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Verified Certified</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-user-ninja"></i></div>
+          <div class="cert-details">
+            <h3>Blue Team Level 1 (BTL1)</h3>
+            <p class="cert-issuer">Issued by Security Blue Team</p>
+            <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Practical Passed</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="cert-details">
+            <h3>Splunk Core Certified User</h3>
+            <p class="cert-issuer">Issued by Splunk Inc.</p>
+            <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Verified Certified</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-shield"></i></div>
+          <div class="cert-details">
+            <h3>Google Cybersecurity Certificate</h3>
+            <p class="cert-issuer">Issued by Google / Coursera</p>
+            <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & CV Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">LIÊN HỆ &amp; HỢP TÁC</span>
+        <h2 class="section-title">Sẵn sàng Kết nối với Nhà tuyển dụng</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info">
+          <h3>Thông tin liên lạc trực tiếp</h3>
+          <p class="contact-sub">Tôi luôn sẵn sàng trao đổi về các cơ hội công việc SOC Analyst, DFIR Intern / Junior Role.</p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="info-label">Email</span>
+                <a href="mailto:nguyenvana.cyber@gmail.com" class="info-value">nguyenvana.cyber@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="info-label">Điện thoại / Zalo</span>
+                <a href="tel:0901234567" class="info-value">+84 901 234 567</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="info-label">Địa điểm làm việc</span>
+                <span class="info-value">TP. Hồ Chí Minh, Việt Nam (On-site / Hybrid / Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-download-card">
+            <i class="fa-solid fa-file-pdf pdf-big-icon"></i>
+            <div>
+              <h4>Tải Hồ sơ Năng lực (CV)</h4>
+              <p>Bản PDF hoàn chỉnh sẵn sàng gửi Nhà tuyển dụng</p>
+            </div>
+            <a href="assets/CV_Cybersecurity.pdf" download class="btn btn-primary btn-pill">
+              <i class="fa-solid fa-download"></i> Tải ngay
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contact-form">
+            <h3>Gửi tin nhắn trực tiếp</h3>
+
+            <div class="form-group">
+              <label for="name">Họ và tên *</label>
+              <input type="text" id="name" name="name" placeholder="Ví dụ: Nguyễn Văn B (HR Manager)" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email liên hệ *</label>
+              <input type="email" id="email" name="email" placeholder="hr@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Chủ đề *</label>
+              <input type="text" id="subject" name="subject" placeholder="Cơ hội công việc SOC Analyst / Trao đổi dự án" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Nội dung tin nhắn *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Nhập lời nhắn của bạn ở đây..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block btn-pill">
+              <span>Gửi tin nhắn ngay</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <div class="form-alert hidden" id="form-alert"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-badge"><i class="fa-solid fa-shield-halved"></i></span>
+            <span class="logo-text">SEC<span class="highlight">PROFILE</span></span>
+          </a>
+          <p>Chuyên viên An ninh mạng phòng thủ (Blue Team) • Giám sát SOC &amp; Điều tra sự cố DFIR.</p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://tryhackme.com" target="_blank" title="TryHackMe"><i class="fa-solid fa-flag"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Cybersecurity Portfolio. Engineered with Passion for Cyber Defense.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
