@@ -3,6 +3,34 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Theme Switcher (Light / Dark Mode)
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme') || 'light';
+
+  if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if (themeToggleBtn) {
+      themeToggleBtn.querySelector('i').className = 'fa-solid fa-sun';
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const icon = themeToggleBtn.querySelector('i');
+
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        icon.className = 'fa-solid fa-moon';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        icon.className = 'fa-solid fa-sun';
+      }
+    });
+  }
+
   // 1. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');

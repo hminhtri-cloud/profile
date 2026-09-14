@@ -39,6 +39,9 @@
       </nav>
 
       <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme" title="Đổi giao diện Sáng / Tối">
+          <i class="fa-solid fa-moon"></i>
+        </button>
         <a href="#contact" class="btn btn-primary btn-pill">
           <span>Get In Touch</span>
           <i class="fa-solid fa-arrow-right"></i>
@@ -130,7 +133,8 @@
         <div class="about-image-wrapper">
           <div class="profile-card">
             <div class="profile-avatar">
-              <i class="fa-solid fa-user-shield avatar-icon"></i>
+              <img src="assets/images/avatar.jpg" alt="Profile Avatar" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="avatar-fallback"><i class="fa-solid fa-user-shield avatar-icon"></i></div>
             </div>
             <div class="profile-badge">
               <i class="fa-solid fa-circle-check"></i> Ready for SOC Role
