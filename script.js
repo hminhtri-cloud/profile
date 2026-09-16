@@ -3,31 +3,35 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 0. Theme Switcher (Light / Dark Mode)
+  // 0. Theme Switcher (Dynamic Island Style)
   const themeToggleBtn = document.getElementById('theme-toggle');
   const currentTheme = localStorage.getItem('theme') || 'light';
 
-  if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    if (themeToggleBtn) {
-      themeToggleBtn.querySelector('i').className = 'fa-solid fa-sun';
+  const updateThemeUI = (theme) => {
+    if (!themeToggleBtn) return;
+    const icon = themeToggleBtn.querySelector('.theme-icon') || themeToggleBtn.querySelector('i');
+    const text = themeToggleBtn.querySelector('.theme-text');
+
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      if (icon) icon.className = 'fa-solid fa-sun theme-icon';
+      if (text) text.textContent = 'Light Mode';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (icon) icon.className = 'fa-solid fa-moon theme-icon';
+      if (text) text.textContent = 'Dark Mode';
     }
-  }
+  };
+
+  // Initialize Theme on load
+  updateThemeUI(currentTheme);
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const icon = themeToggleBtn.querySelector('i');
-
-      if (isDark) {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        icon.className = 'fa-solid fa-moon';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        icon.className = 'fa-solid fa-sun';
-      }
+      const newTheme = isDark ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      updateThemeUI(newTheme);
     });
   }
 
