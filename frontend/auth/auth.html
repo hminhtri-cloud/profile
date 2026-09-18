@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account | SECProfile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/styles.css" />
+  </head>
+  <body>
+    <main class="standalone-page">
+      <div class="container auth-shell">
+        <a href="https://hminhtri.cloud/" class="page-back"
+          ><i class="fa-solid fa-arrow-left"></i> Back to portfolio</a
+        >
+        <section class="auth-card">
+          <span class="sub-heading">SECURE ACCESS</span>
+          <h1>SECProfile Account</h1>
+          <p>Register or log in to continue.</p>
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-mode="login">Log In</button
+            ><button class="auth-tab" data-mode="register">Register</button>
+          </div>
+          <form id="auth-form">
+            <div class="form-group hidden" id="username-field">
+              <label for="username">Username</label
+              ><input id="username" name="username" autocomplete="username" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label
+              ><input
+                id="password"
+                name="password"
+                type="password"
+                minlength="8"
+                required
+                autocomplete="current-password"
+              />
+            </div>
+            <button
+              class="btn btn-primary btn-lg btn-block btn-pill"
+              type="submit"
+            >
+              <span id="submit-label">Log In</span
+              ><i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <div class="auth-alert hidden" id="auth-alert"></div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="src/auth.js"></script>
+  </body>
+</html>

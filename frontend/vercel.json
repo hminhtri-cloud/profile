@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.).*)",
+      "has": [{ "type": "host", "value": "projects.hminhtri.cloud" }],
+      "destination": "/projects/:path*"
+    },
+    {
+      "source": "/((?!.*\\.).*)",
+      "has": [{ "type": "host", "value": "experience.hminhtri.cloud" }],
+      "destination": "/experience/:path*"
+    },
+    {
+      "source": "/((?!.*\\.).*)",
+      "has": [{ "type": "host", "value": "blog.hminhtri.cloud" }],
+      "destination": "/blog/:path*"
+    },
+    {
+      "source": "/((?!.*\\.).*)",
+      "has": [{ "type": "host", "value": "hminhtri.cloud" }],
+      "destination": "/index.html"
+    }
+  ]
+}

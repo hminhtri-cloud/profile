@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         navLinkList.forEach(link => {
           link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
+          if (link.dataset.site === sectionId) {
             link.classList.add('active');
           }
         });
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...';
+       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
       setTimeout(() => {
         submitBtn.disabled = false;
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         formAlert.classList.remove('hidden');
         formAlert.className = 'form-alert success';
-        formAlert.innerHTML = '<i class="fa-solid fa-circle-check"></i> Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công. Tôi sẽ phản hồi sớm nhất có thể.';
+         formAlert.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message was sent successfully. I will get back to you soon.';
 
         contactForm.reset();
 
@@ -185,5 +185,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 6000);
       }, 1200);
     });
+  }
+
+  // 6. Load published posts from Strapi and keep Markdown rendering on the detail page.
+  const blogContainer = document.getElementById('blog-container');
+  const strapiUrl = 'http://localhost:1337/api/posts?sort=createdAt:desc&pagination[limit]=6';
+
+  const getPostAttributes = (post) => post.attributes || post;
+  const escapeHtml = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+  }[char]));
+
+  if (blogContainer) {
+    fetch(strapiUrl)
+      .then((response) => {
+        if (!response.ok) throw new Error('Strapi request failed');
+        return response.json();
+      })
+      .then((result) => {
+        const posts = result.data || [];
+        if (!posts.length) {
+           blogContainer.innerHTML = '<div class="blog-state">No posts have been published yet.</div>';
+          return;
+        }
+        blogContainer.innerHTML = posts.map((post) => {
+          const data = getPostAttributes(post);
+          const slug = data.slug || post.documentId || post.id;
+           return `<a class="blog-card" href="https://blog.hminhtri.cloud/post.html?slug=${encodeURIComponent(slug)}">
+            <div class="blog-card-top"><span class="blog-index">FIELD NOTE</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <h3>${escapeHtml(data.title || 'Untitled post')}</h3>
+             <p>${escapeHtml(data.meta_description || 'Technology and cybersecurity field notes.')}</p>
+             <div class="blog-card-bottom"><span>Read article</span><span>${data.createdAt ? new Date(data.createdAt).toLocaleDateString('en-US') : 'Recently published'}</span></div>
+          </a>`;
+        }).join('');
+      })
+      .catch(() => {
+         blogContainer.innerHTML = '<div class="blog-state"><i class="fa-solid fa-triangle-exclamation"></i> Could not connect to Strapi. Check the API at localhost:1337.</div>';
+      });
   }
 });

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cybersecurity Projects and Skills" />
+    <title>Projects &amp; Skills | SECProfile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/styles.css" />
+  </head>
+  <body>
+    <header class="navbar-header">
+      <div class="nav-container">
+        <a href="https://hminhtri.cloud/" class="nav-logo"
+          ><span class="logo-badge"
+            ><i class="fa-solid fa-shield-halved"></i></span
+          ><span class="logo-text"
+            >SEC<span class="highlight">PROFILE</span></span
+          ></a
+        ><button
+          class="mobile-toggle"
+          id="mobile-toggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-links" id="nav-links">
+          <a href="https://hminhtri.cloud/" class="nav-link">Home</a
+          ><a href="https://projects.hminhtri.cloud/" class="nav-link"
+            >Projects</a
+          ><a href="https://experience.hminhtri.cloud/" class="nav-link"
+            >Experience</a
+          ><a href="https://blog.hminhtri.cloud/" class="nav-link">Blog</a
+          ><a href="https://hminhtri.cloud/#contact" class="nav-link"
+            >Contact</a
+          >
+        </nav>
+        <div class="nav-actions">
+          <a
+            href="https://hminhtri.cloud/#contact"
+            class="btn btn-primary btn-pill"
+            >Get In Touch <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section projects-section" id="projects">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">FEATURED PROJECTS</span>
+            <h1 class="section-title">
+              Monitoring Systems &amp; Hands-on Labs
+            </h1>
+            <div class="heading-line"></div>
+          </div>
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button
+            ><button class="filter-btn" data-filter="siem">
+              SOC &amp; SIEM</button
+            ><button class="filter-btn" data-filter="dfir">
+              DFIR &amp; Forensics</button
+            ><button class="filter-btn" data-filter="automation">
+              Automation
+            </button>
+          </div>
+          <div class="projects-grid">
+            <div class="project-card" data-category="siem">
+              <div class="project-badge">SOC &amp; SIEM</div>
+              <div class="project-content">
+                <h3 class="project-title">
+                  Enterprise SIEM Homelab with Elastic Stack &amp; Sysmon
+                </h3>
+                <p class="project-desc">
+                  Built a Homelab to monitor a Windows Enterprise environment.
+                  Integrated Sysmon to analyze malicious processes and map
+                  alerts to the MITRE ATT&amp;CK framework.
+                </p>
+                <div class="project-tech">
+                  <span>ELK Stack</span><span>Sysmon</span
+                  ><span>Winlogbeat</span><span>MITRE ATT&amp;CK</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="btn btn-sm btn-outline"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  ><a href="#" class="btn btn-sm btn-primary"
+                    ><i class="fa-solid fa-file-lines"></i> Report Writeup</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card" data-category="automation">
+              <div class="project-badge">Automation</div>
+              <div class="project-content">
+                <h3 class="project-title">
+                  Automated IP &amp; Hash Triage SOAR Pipeline
+                </h3>
+                <p class="project-desc">
+                  Developed a Python tool that queries VirusTotal, AbuseIPDB,
+                  and AlienVault OTX when SIEM detects high-risk alerts, then
+                  sends detailed notifications through Telegram / Discord
+                  Webhooks.
+                </p>
+                <div class="project-tech">
+                  <span>Python</span><span>VirusTotal API</span
+                  ><span>REST API</span><span>Telegram Bot</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="btn btn-sm btn-outline"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  ><a href="#" class="btn btn-sm btn-primary"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                    Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card" data-category="dfir">
+              <div class="project-badge">DFIR &amp; Forensics</div>
+              <div class="project-content">
+                <h3 class="project-title">
+                  Ransomware Memory &amp; Disk Artifact Forensics
+                </h3>
+                <p class="project-desc">
+                  Investigated a Ransomware-infected memory image (RAM dump)
+                  with Volatility 3. Recovered process injection, decoded the
+                  payload, and wrote YARA rules to detect similar variants.
+                </p>
+                <div class="project-tech">
+                  <span>Volatility 3</span><span>Autopsy</span><span>YARA</span
+                  ><span>REMnux</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="btn btn-sm btn-outline"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  ><a href="#" class="btn btn-sm btn-primary"
+                    ><i class="fa-solid fa-file-pdf"></i> DFIR Report</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card" data-category="siem">
+              <div class="project-badge">SOC &amp; SIEM</div>
+              <div class="project-content">
+                <h3 class="project-title">
+                  Wireshark Network Traffic Analysis &amp; C2 Detection
+                </h3>
+                <p class="project-desc">
+                  Analyzed a PCAP containing Command &amp; Control (C2) activity
+                  through DNS Tunneling and a Cobalt Strike Beacon. Created
+                  Snort rules to block anomalous traffic.
+                </p>
+                <div class="project-tech">
+                  <span>Wireshark</span><span>Snort IDS</span
+                  ><span>Network Forensics</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="btn btn-sm btn-outline"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  ><a href="#" class="btn btn-sm btn-primary"
+                    ><i class="fa-solid fa-file-lines"></i> Writeup</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section skills-section" id="skills">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">PROFESSIONAL SKILLS</span>
+            <h2 class="section-title">Defensive Tools &amp; Technologies</h2>
+            <div class="heading-line"></div>
+          </div>
+          <div class="skills-categories">
+            <div class="skill-category-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>SIEM &amp; Monitoring</h3>
+              </div>
+              <ul class="skill-list">
+                <li>
+                  <div class="skill-info">
+                    <span>Splunk Enterprise &amp; Enterprise Security</span
+                    ><span class="skill-percent">90%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>Elastic Stack (ELK / Winlogbeat / Sysmon)</span
+                    ><span class="skill-percent">85%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>Wazuh EDR &amp; Open Source SIEM</span
+                    ><span class="skill-percent">80%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="skill-category-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fa-solid fa-microscope"></i>
+                </div>
+                <h3>DFIR &amp; Investigation</h3>
+              </div>
+              <ul class="skill-list">
+                <li>
+                  <div class="skill-info">
+                    <span>Wireshark &amp; Network Traffic Analysis</span
+                    ><span class="skill-percent">92%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 92%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>Volatility (Memory Forensics)</span
+                    ><span class="skill-percent">82%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 82%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>Autopsy / FTK Imager (Disk Forensics)</span
+                    ><span class="skill-percent">85%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="skill-category-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Scripting &amp; Detection</h3>
+              </div>
+              <ul class="skill-list">
+                <li>
+                  <div class="skill-info">
+                    <span>Python (Automation &amp; Log Parsers)</span
+                    ><span class="skill-percent">88%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 88%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>Bash Scripting &amp; PowerShell</span
+                    ><span class="skill-percent">85%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>YARA Rules &amp; SIGMA Detection Rules</span
+                    ><span class="skill-percent">80%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="skill-category-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fa-solid fa-server"></i>
+                </div>
+                <h3>OS &amp; Network Security</h3>
+              </div>
+              <ul class="skill-list">
+                <li>
+                  <div class="skill-info">
+                    <span>Linux Admin (Ubuntu, Kali, REMnux)</span
+                    ><span class="skill-percent">90%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>Active Directory &amp; Windows Event Auditing</span
+                    ><span class="skill-percent">84%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 84%"></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skill-info">
+                    <span>Snort / Suricata IDS/IPS Rules</span
+                    ><span class="skill-percent">80%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Toggle theme"
+      title="Toggle light / dark theme"
+    >
+      <div class="island-content">
+        <i class="fa-solid fa-moon theme-icon"></i
+        ><span class="theme-text">Dark Mode</span>
+      </div>
+    </button>
+    <script src="src/script.js"></script>
+  </body>
+</html>
