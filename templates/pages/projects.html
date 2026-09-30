@@ -1,59 +1,8 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cybersecurity Projects and Skills" />
-    <title>Projects &amp; Skills | SECProfile</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../src/styles.css" />
-  </head>
-  <body>
-    <header class="navbar-header">
-      <div class="nav-container">
-        <a href="https://hminhtri.cloud/" class="nav-logo"
-          ><span class="logo-badge"
-            ><i class="fa-solid fa-shield-halved"></i></span
-          ><span class="logo-text"
-            >SEC<span class="highlight">PROFILE</span></span
-          ></a
-        ><button
-          class="mobile-toggle"
-          id="mobile-toggle"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <nav class="nav-links" id="nav-links">
-          <a href="https://hminhtri.cloud/" class="nav-link">Home</a
-          ><a href="https://projects.hminhtri.cloud/" class="nav-link"
-            >Projects</a
-          ><a href="https://experience.hminhtri.cloud/" class="nav-link"
-            >Experience</a
-          ><a href="https://blog.hminhtri.cloud/" class="nav-link">Blog</a
-          ><a href="https://hminhtri.cloud/#contact" class="nav-link"
-            >Contact</a
-          >
-        </nav>
-        <div class="nav-actions">
-          <a
-            href="https://hminhtri.cloud/#contact"
-            class="btn btn-primary btn-pill"
-            >Get In Touch <i class="fa-solid fa-arrow-right"></i
-          ></a>
-        </div>
-      </div>
-    </header>
-    <main>
+{% extends "base.html" %}
+{% set title = "Projects & Skills | SECProfile" %}
+{% set description = "Cybersecurity Projects and Skills" %}
+{% block content %}
+<main>
       <section class="section projects-section" id="projects">
         <div class="container">
           <div class="section-header text-center">
@@ -347,17 +296,4 @@
         </div>
       </section>
     </main>
-    <button
-      class="theme-toggle"
-      id="theme-toggle"
-      aria-label="Toggle theme"
-      title="Toggle light / dark theme"
-    >
-      <div class="island-content">
-        <i class="fa-solid fa-moon theme-icon"></i
-        ><span class="theme-text">Dark Mode</span>
-      </div>
-    </button>
-    <script src="src/script.js"></script>
-  </body>
-</html>
+{% endblock %}

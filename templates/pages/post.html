@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% set title = "Blog Article | SECProfile" %}
+{% set description = "Technical field note - Cybersecurity Portfolio" %}
+{% block content %}
+<main class="standalone-page">
+      <div class="container article-shell">
+        <a href="{{ url_for('blog') }}" class="page-back"
+          ><i class="fa-solid fa-arrow-left"></i> Back to Blogs</a
+        >
+        <article id="article-container" data-post-slug="{{ post_slug }}">
+          <div class="blog-state">
+            <i class="fa-solid fa-spinner fa-spin"></i> Loading article...
+          </div>
+        </article>
+      </div>
+    </main>
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block scripts %}<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"></script><script src="{{ url_for('static', filename='js/pages/blog.js') }}"></script>{% endblock %}

@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('access_token', result.access_token);
       alertBox.textContent = `${result.message}. The token has been stored for this session.`;
       alertBox.className = 'auth-alert success';
-      if (mode === 'login') window.setTimeout(() => { window.location.href = 'https://blog.hminhtri.cloud/#blogs'; }, 900);
+      if (mode === 'login') window.setTimeout(() => { window.location.href = '/blog#blogs'; }, 900);
     } catch (error) {
       alertBox.textContent = error.message;
       alertBox.className = 'auth-alert error';

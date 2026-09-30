@@ -211,7 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
         blogContainer.innerHTML = posts.map((post) => {
           const data = getPostAttributes(post);
           const slug = data.slug || post.documentId || post.id;
-           return `<a class="blog-card" href="https://blog.hminhtri.cloud/post.html?slug=${encodeURIComponent(slug)}">
+           const postUrl = blogContainer.dataset.postUrl.replace('__slug__', encodeURIComponent(slug));
+           return `<a class="blog-card" href="${postUrl}">
             <div class="blog-card-top"><span class="blog-index">FIELD NOTE</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
             <h3>${escapeHtml(data.title || 'Untitled post')}</h3>
              <p>${escapeHtml(data.meta_description || 'Technology and cybersecurity field notes.')}</p>

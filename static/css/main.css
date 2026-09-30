@@ -369,7 +369,6 @@ ul {
 .ticker-track {
   display: flex;
   align-items: center;
-  gap: 48px;
   width: max-content;
   animation: marquee 25s linear infinite;
 }
@@ -386,6 +385,14 @@ ul {
   letter-spacing: 1.5px;
   color: var(--text-main);
   white-space: nowrap;
+}
+
+.ticker-group {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-shrink: 0;
+  padding-right: 48px;
 }
 
 .ticker-item i {

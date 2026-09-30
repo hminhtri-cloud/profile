@@ -1,32 +1,44 @@
 # Cybersecurity Portfolio
 
-The project is split into independently runnable applications:
-
-- `frontend/`: static portfolio pages and browser-side JavaScript.
-- `backend/`: FastAPI authentication API and MySQL integration.
-- `strapi/`: Strapi CMS containing the `post` collection.
+Flask serves the portfolio pages and renders the Jinja templates. The existing
+FastAPI service remains responsible for authentication, and Strapi remains the
+source for blog posts.
 
 ## Run locally
 
 ```bash
-cd backend
-cp .env.example .env
-python -m pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+flask --app app run --debug
 ```
 
-In another terminal:
+Open `http://127.0.0.1:5000`.
 
-```bash
-cd frontend
-python3 -m http.server 5500
-```
+For authentication, run the existing service separately from `backend/` with
+its own environment and MySQL database. For blog content, run Strapi from
+`strapi/` with `npm run develop`. The browser-side integration still uses the
+existing local endpoints at `http://localhost:8000` and `http://localhost:1337`.
 
-Run Strapi separately:
+## Routes
 
-```bash
-cd strapi
-npm run develop
-```
+- `/` - home
+- `/projects` - projects and skills
+- `/experience` - experience and certifications
+- `/blog` - blog listing
+- `/blog/<post>` - blog article
+- `/login` - account login/register page
 
-The browser pages call Strapi at `http://localhost:1337` and FastAPI at `http://localhost:8000`.
+## Structure
+
+`templates/base.html` owns the document shell and shared theme controls.
+`templates/components/` contains the shared navbar and footer. Page markup is
+under `templates/pages/`, while CSS, JavaScript, images, and documents live in
+`static/` and are referenced with Flask `url_for` URLs. The existing CSS remains
+one `main.css` file because most rules are shared across pages; JavaScript is
+split into global behavior and page-specific modules.
+
+The root Flask app is the web layer. `backend/` is intentionally kept as a
+separate FastAPI authentication service with MySQL, and `strapi/` remains the
+blog CMS. They are not replaced with mock authentication, database, or API
+implementations.

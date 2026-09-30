@@ -1,24 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle');
-  const theme = localStorage.getItem('theme') || 'light';
-  const updateTheme = (value) => {
-    document.documentElement.toggleAttribute('data-theme', value === 'dark');
-    if (value === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    const icon = themeToggle?.querySelector('.theme-icon');
-    const text = themeToggle?.querySelector('.theme-text');
-    if (icon) icon.className = value === 'dark' ? 'fa-solid fa-sun theme-icon' : 'fa-solid fa-moon theme-icon';
-    if (text) text.textContent = value === 'dark' ? 'Light Mode' : 'Dark Mode';
-  };
-  updateTheme(theme);
-  themeToggle?.addEventListener('click', () => {
-    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', next);
-    updateTheme(next);
-  });
-
-  const slug = new URLSearchParams(window.location.search).get('slug');
   const container = document.getElementById('article-container');
   if (!container) return;
+  const slug = container.dataset.postSlug || new URLSearchParams(window.location.search).get('slug');
   if (!slug) {
     container.innerHTML = '<div class="blog-state">Article slug not found.</div>';
     return;

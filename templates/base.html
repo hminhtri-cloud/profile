@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% if description %}<meta name="description" content="{{ description }}" />{% endif %}
+    <title>{{ title or "SECProfile" }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block navbar %}{% include "components/navbar.html" %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% include "components/footer.html" %}{% endblock %}
+    {% block theme_toggle %}
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle light / dark theme">
+      <div class="island-content"><i class="fa-solid fa-moon theme-icon"></i><span class="theme-text">Dark Mode</span></div>
+    </button>
+    {% endblock %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

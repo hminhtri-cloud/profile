@@ -1,0 +1,12 @@
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+.env
+.DS_Store
+**/.DS_Store
+.pytest_cache/
+.mypy_cache/
+node_modules/
+strapi/.tmp/
+strapi/dist/

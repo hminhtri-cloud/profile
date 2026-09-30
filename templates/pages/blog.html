@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set title = "Blogs | SECProfile" %}
+{% set description = "Technical field note - Cybersecurity Portfolio" %}
+{% block content %}
+<main class="standalone-page">
+      <div class="container">
+        <a href="{{ url_for('home') }}" class="page-back"
+          ><i class="fa-solid fa-arrow-left"></i> Back to portfolio</a
+        >
+        <section class="section blogs-section" id="blogs">
+          <div class="section-header text-center">
+            <span class="sub-heading">TECHNICAL FIELD NOTES</span>
+            <h1 class="section-title">Technology &amp; Cybersecurity Blog</h1>
+            <div class="heading-line"></div>
+            <p class="section-intro">
+              Hands-on field notes about Blue Team, SOC, DFIR, and security
+              automation.
+            </p>
+          </div>
+          <div class="blogs-grid" id="blog-container" data-post-url="{{ url_for('post', post='__slug__') }}" aria-live="polite">
+            <div class="blog-state">
+              <i class="fa-solid fa-spinner fa-spin"></i> Loading posts...
+            </div>
+          </div>
+          <div class="blog-footer-link">
+            <a
+              class="btn btn-outline btn-pill"
+              href="{{ url_for('login') }}"
+              ><i class="fa-solid fa-right-to-bracket"></i> Account Login</a
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+{% endblock %}
+{% block scripts %}<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"></script><script src="{{ url_for('static', filename='js/pages/blog.js') }}"></script>{% endblock %}
