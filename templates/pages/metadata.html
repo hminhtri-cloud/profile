@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% set title = "Metadata Analysis | SECProfile" %}
+{% set description = "Explore a Facebook or Instagram data export privately in your browser." %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/metadata.css') }}" />{% endblock %}
+{% block content %}
+<main class="standalone-page metadata-page">
+  <div class="container">
+    <a class="page-back" href="{{ url_for('projects') }}"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+    <div class="section-header text-center">
+      <span class="sub-heading">PRIVACY-FIRST DATA EXPLORER</span>
+      <h1 class="section-title">Metadata Analysis</h1>
+      <p class="metadata-intro">Explore activity patterns in your Facebook or Instagram JSON export, right in your browser.</p>
+      <div class="heading-line"></div>
+    </div>
+    <section class="metadata-panel" aria-labelledby="upload-title">
+      <h2 id="upload-title">Choose an export folder</h2>
+      <p>Select the unzipped Facebook or Instagram export folder. Only recognized JSON datasets are read; photos, messages and other files are skipped.</p>
+      <label class="metadata-picker" for="metadata-folder"><i class="fa-solid fa-folder-open"></i><span>Choose folder</span></label>
+      <input id="metadata-folder" type="file" webkitdirectory directory multiple aria-describedby="metadata-help" />
+      <p id="metadata-help" class="metadata-hint">Supported: Facebook search history, friends, interactions, profile updates, comments and reactions; Instagram followers, following, likes, comments and stories. No dataset is mandatory, but at least one supported dataset must contain valid records.</p>
+      <p class="metadata-privacy"><i class="fa-solid fa-lock"></i> Files are processed locally in this tab. Nothing is uploaded or stored by this site. Closing or reloading the tab clears the results.</p>
+      <div id="metadata-selection" class="metadata-selection" hidden></div>
+      <button id="metadata-analyze" class="btn btn-primary" type="button" disabled>Analyze folder</button>
+      <p id="metadata-status" role="status" aria-live="polite"></p>
+      <div id="metadata-error" class="metadata-error" role="alert" hidden></div>
+    </section>
+    <section id="metadata-results" aria-label="Analysis results" hidden></section>
+  </div>
+</main>
+{% endblock %}
+{% block scripts %}<script type="module" src="{{ url_for('static', filename='js/pages/metadata.mjs') }}"></script>{% endblock %}

@@ -1,0 +1,56 @@
+.metadata-page .section-header { margin-bottom: 36px; }
+.metadata-page .heading-line { margin-bottom: 0; }
+.metadata-intro { color: var(--text-muted); margin-top: 12px; }
+.metadata-panel, .metadata-section, .metadata-stat, .metadata-chart, .metadata-warnings {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-sm);
+}
+.metadata-panel { padding: 32px; }
+.metadata-panel h2 { margin-bottom: 8px; }
+.metadata-panel p { color: var(--text-muted); margin: 10px 0; }
+.metadata-picker { display: inline-flex; align-items: center; gap: 12px; background: var(--primary);
+  color: var(--text-main); font-weight: 800; border-radius: var(--radius-sm); padding: 14px 22px;
+  cursor: pointer; margin: 18px 0 6px; }
+.metadata-picker:hover { background: var(--primary-dark); }
+#metadata-folder { position: absolute; width: 1px; height: 1px; opacity: 0; }
+#metadata-folder:focus-visible + .metadata-hint { outline: 2px solid var(--accent-blue); }
+.metadata-hint { font-size: .87rem; color: var(--text-muted); }
+.metadata-privacy { padding: 12px; background: var(--primary-light); border-radius: var(--radius-sm); }
+.metadata-privacy i { margin-right: 6px; }
+.metadata-selection { margin: 24px 0; border-top: 1px solid var(--border-color); padding-top: 20px; overflow-wrap: anywhere; }
+.metadata-selection ul { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.metadata-selection li { background: var(--bg-slate); border: 1px solid var(--border-color); border-radius: var(--radius-pill); padding: 4px 10px; font-size: .8rem; }
+#metadata-analyze { margin-top: 16px; }
+#metadata-analyze:disabled { opacity: .5; cursor: not-allowed; }
+#metadata-status { min-height: 24px; font-weight: 700; }
+.metadata-error, .metadata-warnings { color: #991b1b; background: #fee2e2; padding: 14px; margin-top: 14px; border-radius: var(--radius-sm); }
+.metadata-warnings { margin: 20px 0; }
+.metadata-warnings ul { list-style: disc; padding-left: 22px; overflow-wrap: anywhere; }
+.metadata-result-heading { margin: 42px 0 20px; }
+.metadata-result-heading p { color: var(--text-muted); }
+.metadata-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; }
+.metadata-stat { padding: 20px; display: flex; flex-direction: column; }
+.metadata-stat strong { font-size: 1.9rem; color: var(--primary-deep); }
+.metadata-stat span { color: var(--text-muted); font-size: .9rem; }
+.metadata-section { margin: 24px 0; padding: 28px; }
+.metadata-section > h2 { margin-bottom: 16px; }
+.metadata-chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 430px), 1fr)); gap: 18px; }
+.metadata-chart { padding: 18px; min-width: 0; margin-top: 16px; }
+.metadata-chart h3 { font-size: 1rem; margin-bottom: 18px; }
+.metadata-chart-scroll { overflow-x: auto; padding-bottom: 8px; }
+.metadata-plot { display: flex; align-items: flex-end; gap: 8px; min-height: 194px; width: max-content; min-width: 100%; border-bottom: 1px solid var(--border-color); }
+.metadata-column { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-width: 40px; flex: 1; }
+.metadata-bar { width: 24px; background: linear-gradient(var(--primary-deep), var(--primary)); border-radius: 5px 5px 0 0; }
+.metadata-pair { display: flex; gap: 3px; align-items: flex-end; }
+.metadata-pair .metadata-bar { width: 17px; }
+.metadata-reactions { background: #e49b40; }
+.metadata-legend { display: flex; gap: 16px; font-size: .78rem; }
+.metadata-legend-comments { color: var(--primary-deep); }
+.metadata-legend-reactions { color: #b76518; }
+.metadata-bar-value { font-size: .7rem; color: var(--text-muted); }
+.metadata-bar-label { font-size: .68rem; color: var(--text-muted); white-space: nowrap; padding: 6px 0; }
+.metadata-words { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; color: var(--primary-deep); }
+.metadata-history { margin-top: 18px; }
+.metadata-history summary { cursor: pointer; font-weight: 700; }
+.metadata-history ul { list-style: disc; padding: 12px 24px; max-height: 300px; overflow: auto; }
+@media (max-width: 600px) { .metadata-panel, .metadata-section { padding: 20px; } }

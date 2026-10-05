@@ -14,6 +14,11 @@ def projects():
     return render_template("pages/projects.html", active_page="projects")
 
 
+@app.route("/projects/metadata")
+def metadata():
+    return render_template("pages/metadata.html", active_page="projects")
+
+
 @app.route("/experience")
 def experience():
     return render_template("pages/experience.html", active_page="experience")
