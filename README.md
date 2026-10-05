@@ -44,6 +44,8 @@ blog CMS. They are not replaced with mock authentication, database, or API
 implementations.
 
 Metadata Analysis is a standalone application in the sibling `../metadata/`
-project. Its card on `/projects` links to `https://metadata.hminhtri.cloud/`.
+project. Its card on `/projects` opens `https://metadata.hminhtri.cloud/` in a
+new tab. The standalone application's visual identity and navigation are
+independent of the portfolio.
 The GitHub button points to the planned `hminhtri-cloud/metadata` repository;
 create and publish that repository before sharing the link.
