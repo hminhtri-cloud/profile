@@ -43,6 +43,16 @@ separate FastAPI authentication service with MySQL, and `strapi/` remains the
 blog CMS. They are not replaced with mock authentication, database, or API
 implementations.
 
+## Visual theme
+
+`static/css/microshop-theme.css` is loaded after `main.css` in
+`templates/base.html`. It gives the Flask pages the same white-and-`#2f6bff`
+visual language as MicroShop: Be Vietnam Pro typography, restrained borders,
+rounded cards, a centered homepage hero, and responsive layouts. The existing dark
+mode toggle and page behavior remain available; the new stylesheet also
+defines matching dark colors. Update shared color tokens at the top of that
+file when changing the palette.
+
 Metadata Analysis is a standalone application in the sibling `../metadata/`
 project. Its card on `/projects` opens `https://metadata.hminhtri.cloud/` in a
 new tab. The standalone application's visual identity and navigation are

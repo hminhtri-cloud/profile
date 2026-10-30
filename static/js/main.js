@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+      mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
       const icon = mobileToggle.querySelector('i');
       if (navLinks.classList.contains('active')) {
         icon.classList.remove('fa-bars');
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
         const icon = mobileToggle.querySelector('i');
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
@@ -119,44 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Animated Statistics Counter
-  const statNumbers = document.querySelectorAll('.stat-number');
-  let animated = false;
-
-  const animateCounters = () => {
-    const statsSection = document.querySelector('.stats-grid');
-    if (!statsSection) return;
-
-    const sectionPos = statsSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight;
-
-    if (sectionPos < screenPos && !animated) {
-      animated = true;
-      statNumbers.forEach(stat => {
-        const target = +stat.getAttribute('data-count');
-        const duration = 1500; // 1.5s
-        const step = target / (duration / 16);
-        let current = 0;
-
-        const updateCounter = () => {
-          current += step;
-          if (current < target) {
-            stat.innerText = Math.ceil(current);
-            requestAnimationFrame(updateCounter);
-          } else {
-            stat.innerText = target;
-          }
-        };
-
-        updateCounter();
-      });
-    }
-  };
-
-  window.addEventListener('scroll', animateCounters);
-  animateCounters(); // Trigger if already in view
-
-  // 5. Contact Form Handler
+  // 4. Contact Form Handler
   const contactForm = document.getElementById('contact-form');
   const formAlert = document.getElementById('form-alert');
 
@@ -187,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Load published posts from Strapi and keep Markdown rendering on the detail page.
+  // 5. Load published posts from Strapi and keep Markdown rendering on the detail page.
   const blogContainer = document.getElementById('blog-container');
   const strapiUrl = 'http://localhost:1337/api/posts?sort=createdAt:desc&pagination[limit]=6';
 
