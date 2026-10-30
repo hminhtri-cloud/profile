@@ -112,8 +112,8 @@ body { font-family: "Be Vietnam Pro", system-ui, sans-serif; line-height: 1.75; 
 .about-section, .cert-section, .projects-section, .skills-section, .timeline-section, .contact-section, .blogs-section { background: var(--bg-white); }
 .about-section, .skills-section, .cert-section { background: var(--bg-slate); }
 main > .projects-section, main > .timeline-section { padding-top: 158px; }
-.about-grid { gap: 50px; align-items: start; }.profile-card { border-radius: 17px; box-shadow: none; padding: 29px 25px; }
-.profile-avatar { background: var(--primary-light); border: 0; box-shadow: none; border-radius: 16px; width: 115px; height: 115px; }.avatar-icon { color: var(--primary-deep); font-size: 3rem; }
+.about-grid { gap: 50px; align-items: stretch; }.about-image-wrapper { display: flex; }.profile-card { width: 100%; height: 100%; box-sizing: border-box; border-radius: 17px; box-shadow: none; padding: 29px 25px; }
+.profile-avatar { background: var(--primary-light); border: 0; box-shadow: none; border-radius: 16px; width: 145px; height: 145px; }.avatar-icon { color: var(--primary-deep); font-size: 3rem; }
 .profile-badge { border-radius: 6px; font-size: .68rem; }.profile-info h3 { letter-spacing: -.03em; }.profile-role { color: var(--text-muted); }
 .social-links a { border-radius: 9px; background: var(--primary-light); color: var(--primary-deep); }.social-links a:hover { background: var(--primary); color: #fff; }
 .about-heading { font-size: 1.45rem; letter-spacing: -.03em; }.about-text-content p { font-size: .86rem; line-height: 1.9; }
