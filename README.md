@@ -1,4 +1,5 @@
 # Cybersecurity Portfolio
+# it works on https://hminhtri.cloud
 
 Flask serves the portfolio pages and renders the Jinja templates. The existing
 FastAPI service remains responsible for authentication, and Strapi remains the
